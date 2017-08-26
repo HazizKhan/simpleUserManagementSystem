@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="app-heading">User Management System</h1>
+    <div class="container">
+        <button class="btn btn-outline-dark btn-lg mb-10" id="addBtn" onclick="enableAddMode()">Add New User</button>
+        <button class="btn btn-outline-danger btn-lg mb-10 new" id="addCancelBtn" onclick="disableAddMode()">Cancel</button>
+    <table class="table table-bordered table-striped">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Age</th>
+      <th>Region</th>
+      <th>Birthday</th>
+      <th>Phone Number</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr class="new" id="new">
+                <td>
+                    <input type="text" required id="nameField"  class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" required id="surnameField" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" required id="ageField" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" required id="regionField" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" required id="birthdayField" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" required id="phoneField" class="form-control"/>
+                </td>
+                <td>
+                    <button class="btn btn-outline-success no-border" onclick="addUser()"><i class="material-icons">add</i></button>
+                    <button class="btn btn-outline-danger no-border" onclick="disableAddMode()"><i class="material-icons">clear</i></button>
+                </td>
+            </tr>
+  </tbody>
+  <tbody id="tbody">
+               
+  </tbody>
+</table>
+</div>
+    <script src="./user.js"></script>
+    <script src="./db.js"></script>    
+    <script src="./app.js"></script>
+</body>
+</html>
